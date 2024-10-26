@@ -6,7 +6,9 @@ function App() {
   useEffect(() => {
     const restCall = async () => {
       console.log("CHAMADA API")
-      const chamada = await fetch("http://localhost:9000/get");
+      const chamada = await fetch("http://localhost:9000/post" {
+        method: "POST",
+      });
       const dados = await chamada.json();
       setItem([...dados])
 
